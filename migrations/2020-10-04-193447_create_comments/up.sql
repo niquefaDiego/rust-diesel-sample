@@ -1,0 +1,6 @@
+CREATE TABLE "comments" (
+	id SERIAL PRIMARY KEY,
+	"postId" INT4 NOT NULL,
+	body TEXT NOT NULL ,
+	CONSTRAINT fk_post FOREIGN KEY("postId") REFERENCES posts(id)
+)
